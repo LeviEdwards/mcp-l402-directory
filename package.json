@@ -1,0 +1,13 @@
+{
+  "name": "mcp-l402-directory",
+  "version": "1.0.0",
+  "description": "MCP server for discovering L402 and x402 paywalled API services",
+  "type": "module",
+  "main": "server.js",
+  "bin": { "mcp-l402-directory": "./server.js" },
+  "scripts": { "start": "node server.js" },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "node-fetch": "^3.0.0"
+  }
+}
