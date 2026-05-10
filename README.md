@@ -35,6 +35,23 @@ npx mcp-l402-directory
 
 The server communicates via stdio.
 
+## Client Scripts
+
+Two copy-paste Python clients for testing any L402 API endpoint:
+
+| Script | Use case |
+|--------|----------|
+| `l402-client.py` | **Manual** — works with any Lightning wallet. Fetches invoice, you pay in your wallet, paste the preimage back. |
+| `l402-client-auto.py` | **Automated** — works with LND nodes. One command: fetch invoice → pay via LND → return data. |
+
+Test against the live endpoint:
+```bash
+python3 l402-client.py        # manual — paste invoice into any wallet
+python3 l402-client-auto.py   # automated — LND pays and returns data
+```
+
+Both scripts call `https://dispatches.mystere.me/api/network` (10 sats/call) but can be modified to hit any L402 endpoint.
+
 ## What is L402?
 
 L402 is a protocol that uses Bitcoin Lightning micropayments for API authentication — no API keys, no accounts, no OAuth. Pay a few sats, get access. [Learn more](https://satring.com).

@@ -6,6 +6,7 @@
   "main": "server.js",
   "bin": { "mcp-l402-directory": "./server.js" },
   "scripts": { "start": "node server.js" },
+  "files": ["server.js", "README.md", "l402-client.py", "l402-client-auto.py"],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "node-fetch": "^3.0.0"
